@@ -1,0 +1,8 @@
+
+#equation
+  span.num.color1=num1
+  | &nbsp;
+  operation
+  | &nbsp;
+  span.num.color2=num2
+  | &nbsp;= ?

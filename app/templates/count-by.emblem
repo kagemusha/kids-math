@@ -1,0 +1,15 @@
+| Count by:
+Ember.Select content=countByNums value=countBy
+button{action "toggleCounting"}
+  countBtnLbl
+if canContinue
+  button{action "continue"}
+    | Continue
+br
+table#count-table
+  tbody
+    each yNum in num2Array
+      tr
+        each xNum in num1Array
+          count-cell table=controller xNum=xNum yNum=yNum currentNum=num
+

@@ -1,0 +1,26 @@
+.top-panel
+
+  #table-equation
+    equationText
+    | ?
+
+  #answer-range
+    each num in answers
+      table-answer-button action='verifyAnswer' num=num answer=correctAnswer isAnsweredState=isAnsweredState table=controller
+
+  #buttons
+    #msg{bind-attr class="isAnsweredState isCorrectState"}=message
+
+table#equation-table
+  tr
+    td.operation
+      operationText
+    each xNum in num1Array
+      operand-cell operand=operand1 num=xNum classNameBindings=":top"
+  each yNum in num2Array
+    tr
+      operand-cell operand=operand2 num=yNum
+      each xNum in num1Array
+        answer-cell table=controller xNum=xNum yNum=yNum classNameBindings="selected"
+
+button{action "showAll"}=buttonText

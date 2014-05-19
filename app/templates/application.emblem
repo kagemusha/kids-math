@@ -1,0 +1,15 @@
+render 'settings'
+#content
+  h2=greeting
+  hr
+  ul#menu
+    li
+      link-to "index"
+        | Random
+    li
+      link-to "operation-table"
+        | Table
+    li
+      link-to "count-by"
+        | Count by
+  outlet

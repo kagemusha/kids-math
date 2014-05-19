@@ -1,0 +1,8 @@
+h5=model.name
+Em.Select content=numTypes value=model.numType
+if isFixed
+  | &nbsp;&nbsp;fixed at:
+  Em.Select content=model.numRange value=model.fixedVal
+if isOrdered
+  | &nbsp;&nbsp;step by:
+  Em.Select content=model.numRange value=model.stepBy

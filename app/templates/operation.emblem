@@ -1,0 +1,38 @@
+partial 'equation'
+#space1{bind-attr class='isAnsweredState'}
+  | &nbsp;
+
+#visualization
+  if level2Question
+    span.num.color1=num1
+  else
+    each num1Array
+      .ball.color1
+
+  span#visualization-operation{bind-attr class='isAnsweredState'}
+    | &nbsp;
+    unless level2Question
+      if showOperationInVisualization
+        operation
+      | &nbsp;
+  each num2Array
+    .ball.color2
+
+/if isAnsweredState
+/  #answer-visual{bind-attr class="isAnsweredState"}
+/    each num in answerArray
+/      .ball.answer{bind-attr class="isAnsweredState"}=num
+#space2{bind-attr class='isAnsweredState'}
+  | &nbsp;
+
+#answer-range
+  each num in answerArray
+    div{bind-attr class=":ball :answer isAnsweredState"}=num
+  each num in answerRange
+    answer-button action='verifyAnswer' num=num answer=answer isAnsweredState=isAnsweredState
+
+#buttons
+  #msg{bind-attr class="isAnsweredState isCorrectState"}=message
+  | &nbsp;&nbsp;&nbsp;
+  button{bind-attr class="isAnsweredState isCorrectState"}{action 'reset'}
+    = buttonLabel

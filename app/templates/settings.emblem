@@ -1,0 +1,20 @@
+#drawer{action 'showSettings'}
+  .bar
+  .bar
+  .bar
+
+#settings{bind-attr class='isShowingSettings isHidingSettings'}
+  #settings-inset
+    h3 Settings
+    button#close-settings{action 'close'} Close
+    br
+    br
+    label Kids Names
+    br
+    input type="text" placeholder="Kids names" value=kidsNames
+    br
+    label Level
+    br
+    Em.Select content=levels value=level
+    each operand in operands
+      render 'operand' operand

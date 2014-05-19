@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KidsMath</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/kids-math.css">
+  </head>
+  <body>
+    <script>
+      window.ENV = {{ENV}};
+    </script>
+    <script src="assets/kids-math.js"></script>
+    <script>
+      window.KidsMath = require('kids-math/app')['default'].create(ENV.APP);
+    </script>
+  </body>
+</html>

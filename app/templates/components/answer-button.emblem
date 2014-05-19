@@ -1,0 +1,2 @@
+button.answer{bind-attr class="isDisappeared"}=num
+

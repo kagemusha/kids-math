@@ -1,0 +1,1 @@
+span{bind-attr class="countSelected alreadySelected"}=displayText
