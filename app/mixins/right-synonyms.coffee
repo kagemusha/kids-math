@@ -1,4 +1,5 @@
-Mixin = Ember.Mixin.create
+`import Em from 'ember'`
+Mixin = Em.Mixin.create
   rightSynonyms: ['Right','Yes','Correct']
   right: ->
     index = Math.floor((Math.random()*@get('rightSynonyms.length')));

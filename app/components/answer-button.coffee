@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 AnswerButtonComponent = Em.Component.extend
   tagName: "span"
   isCorrect: (-> @get('num') == @get('answer')).property('num', 'answer')

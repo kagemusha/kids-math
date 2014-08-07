@@ -1,3 +1,4 @@
+`import Em from 'ember'`
 `import Math from "kids-math/helpers/math"`
 `import RightSynonyms from "kids-math/mixins/right-synonyms"`
 

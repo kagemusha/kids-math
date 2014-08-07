@@ -2,6 +2,7 @@
 
 var Application = require('kids-math/app')['default'];
 var Router = require('kids-math/router')['default'];
+import Ember from 'ember';
 
 export default function startApp(attrs) {
   var App;

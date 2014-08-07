@@ -1,7 +1,8 @@
+`import Em from 'ember'`
 
-MyRoute = Ember.Route.extend
+MyRoute = Em.Route.extend
 
-  setupController: (controller, model, queryParams)->
+  setupController: (controller)->
     controller.resetNums();
 
 `export default MyRoute`

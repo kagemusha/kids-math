@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 Export = Em.Component.extend
   tagName: "span"
   #classNameBindings: ["correctlySelected"]

@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 Obj = Em.Object.extend
   rangeBottom: 1
   rangeTop: 10

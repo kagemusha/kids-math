@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 Obj = Em.Component.extend
   tagName: "td"
   classNames: ["operand"]

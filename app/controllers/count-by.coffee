@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 Controller = Em.Controller.extend
 
   countTo: 100
@@ -37,8 +39,5 @@ Controller = Em.Controller.extend
     continue: ->
       @set "counting", true
       @count()
-    test: ->
-      console.log "test"
-    next: ->
 
 `export default Controller`

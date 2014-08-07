@@ -1,6 +1,8 @@
+`import Em from 'ember'`
+
 Obj = Em.Component.extend
   inserted: (->
-    $(@get "element").addClass('animated flash');
+    Em.$(@get "element").addClass('animated flash');
 
   ).on("didInsertElement")
   tagName: "td"

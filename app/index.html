@@ -9,15 +9,18 @@
 
     {{BASE_TAG}}
 
+    <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/kids-math.css">
   </head>
   <body>
     <script>
-      window.ENV = {{ENV}};
+      window.KidsMathENV = {{ENV}};
+      window.EmberENV = window.KidsMathENV.EmberENV;
     </script>
+    <script src="assets/vendor.js"></script>
     <script src="assets/kids-math.js"></script>
     <script>
-      window.KidsMath = require('kids-math/app')['default'].create(ENV.APP);
+      window.KidsMath = require('kids-math/app')['default'].create(KidsMathENV.APP);
     </script>
   </body>
 </html>

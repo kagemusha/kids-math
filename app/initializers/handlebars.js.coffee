@@ -1,3 +1,4 @@
+`import Em from 'ember'`
 initializer =
   name: 'registerHbsTimesHelper'
   initialize: ->

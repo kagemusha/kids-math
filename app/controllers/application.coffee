@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 ApplicationController = Em.Controller.extend
   needs: ['settings']
   kidsNames: Em.computed.alias("controllers.settings.model.kidsNames")

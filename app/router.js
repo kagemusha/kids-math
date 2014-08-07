@@ -1,5 +1,7 @@
-var Router = Ember.Router.extend({
-  location: ENV.locationType
+import Em from 'ember';
+
+var Router = Em.Router.extend({
+  location: KidsMathENV.locationType
 });
 
 Router.map(function() {

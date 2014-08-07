@@ -1,3 +1,5 @@
+`import Em from 'ember'`
+
 MyController = Em.Controller.extend
   numTypes: ["random","fixed","ordered"]
   isFixed: Em.computed.equal "model.numType", "fixed"

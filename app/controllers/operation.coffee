@@ -1,3 +1,4 @@
+`import Em from 'ember'`
 `import RightSynonyms from "kids-math/mixins/right-synonyms"`
 
 Controller = Em.Controller.extend RightSynonyms,

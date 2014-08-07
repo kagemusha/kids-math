@@ -1,5 +1,5 @@
 | Count by:
-Ember.Select content=countByNums value=countBy
+Em.Select content=countByNums value=countBy
 button{action "toggleCounting"}
   countBtnLbl
 if canContinue

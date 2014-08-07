@@ -1,3 +1,4 @@
+`import Em from 'ember'`
 `import Operand from "kids-math/models/operand"`
 
 SettingsController = Em.ObjectController.extend
