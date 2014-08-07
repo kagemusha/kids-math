@@ -6,5 +6,6 @@ Router = Em.Router.extend
 Router.map ->
   @route "operation-table"
   @route "count-by"
+  @route "quiz"
 
 `export default Router`

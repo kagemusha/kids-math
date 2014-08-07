@@ -3,6 +3,7 @@ render 'settings'
   h2=greeting
   hr
   ul#menu
+
     li
       link-to "index"
         | Random
@@ -12,4 +13,8 @@ render 'settings'
     li
       link-to "count-by"
         | Count by
+    li
+      link-to "quiz"
+        | Quiz
+
   outlet
