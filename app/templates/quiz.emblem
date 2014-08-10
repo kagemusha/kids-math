@@ -1,2 +1,4 @@
 |  Question #{questionCount} of #{totalQuestions}
 
+.equation
+  equationGenerator.equationText
