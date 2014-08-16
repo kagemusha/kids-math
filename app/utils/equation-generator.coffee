@@ -31,15 +31,17 @@ Obj = Em.Object.extend
   ).property("equationText")
   #have more strategies later
   #number of answers to show
-  answerCount: 5
-  answerRange: (->
+  answerCount: 8
+  randomAnswerRange: (->
     answers = [@get "answer"]
     while answers.length < @answerCount
       answer = @randomFromRange()
       answers.push(answer) if answers.indexOf(answer) < 0
-    answers
+    _.shuffle answers
   ).property("answer")
-
+  answerRange: (->
+    [@get('lowerBound')..@get('upperBound')]
+  ).property("lowerBound","upperBound")
   getAnOperation: (token) ->
     if POSSIBLE_OPERATIONS.indexOf(token) > -1
       token

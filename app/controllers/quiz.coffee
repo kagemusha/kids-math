@@ -3,12 +3,27 @@
 
 Controller = Em.ObjectController.extend
   init: ->
-    equationGenerator = EqGenerator.create();
-    @set "equationGenerator", equationGenerator
-    equationGenerator.generateEquation();
-  equationGenerator: null
+    equation = EqGenerator.create()
+    @set "equation", equation
+    equation.generateEquation()
+  equation: null
+  possiblePoints: 5
+  answerRange: [0..20]
+  finished: false
   actions:
-    next: ->
-      console.log "next"
+    verifyAnswer: (answer) ->
+      correct = @get('equation.correctAnswer')
+      possiblePts = @get('possiblePoints')
+      if 0+answer == correct
+        @incrementProperty 'score', possiblePts
+        @set 'possiblePts', @get 'maxPointsPerQuestion'
+        if @get('questionCount') < @get('totalQuestions')
+          @incrementProperty 'questionCount'
+          @get('equation').generateEquation()
+        else
+          @set 'finished', true
+      else
+        @decrementProperty 'possiblePoints'
+
 
 `export default Controller`

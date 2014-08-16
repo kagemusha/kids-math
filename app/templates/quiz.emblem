@@ -1,4 +1,16 @@
-|  Question #{questionCount} of #{totalQuestions}
+.question-count
+  |  Question #{questionCount} of #{totalQuestions}
+  unless finished
+    | &nbsp; Score: #{score}
+  br
+  if finished
+    | Finished! Final Score: #{score}
 
-.equation
-  equationGenerator.equationText
+#equation
+  equation.equationText
+  | &nbsp; = &nbsp; ?
+
+
+#answer-range
+  each num in answerRange
+    answer-button action='verifyAnswer' num=num answer=equation.answer isAnsweredState=isAnsweredState
