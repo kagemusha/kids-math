@@ -5,6 +5,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp();
 
 app.import('vendor/lodash/dist/lodash.js');
+app.import('vendor/d3/d3.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
