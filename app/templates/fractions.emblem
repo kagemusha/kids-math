@@ -21,8 +21,8 @@
       numeratorAnswer
       .complete
         | Right!
-        span.answer | #{numerator} of #{denominator}
-        | are #{selectedColor}
+        span.answer #{numerator} of #{denominator}
+        | &nbsp;are #{selectedColor}
     else
       =input type='text' enter="onNumeratorAnswer" size='1' autofocus='true'
       if answeredNumerator

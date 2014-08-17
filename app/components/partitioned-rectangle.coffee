@@ -3,7 +3,14 @@
 Obj = Em.Component.extend
   classNameBindings: [":rectangles"]
   onInsert: (->
+    @reset()
+  ).on("didInsertElement")
+  onCountsChanged: (->
+    @reset()
+  ).observes('partCount', 'selectedParts')
+  reset: ->
     elem = @get('element')
+    Em.$(elem).empty()
     elemWidth = Em.$(elem).width()
     height = Em.$(elem).height()
     partCount = @get('partCount')
@@ -24,7 +31,6 @@ Obj = Em.Component.extend
     .style("fill", (d,i)=> if @selectPart(i) then selectedColor else 'lightgray')
     .style("stroke", 'black')
     .style("stroke-width", 1)
-  ).on("didInsertElement")
   selectPart: (i) ->
     i in @get('selectedParts')
   selectedParts: (->

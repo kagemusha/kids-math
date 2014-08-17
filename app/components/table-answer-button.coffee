@@ -2,7 +2,6 @@
 
 Export = Em.Component.extend
   tagName: "span"
-  #classNameBindings: ["correctlySelected"]
   correctlySelected: Em.computed.and("isCorrect","clicked")
   wasCorrectlyAnswered: Em.computed.alias("table.isCorrectState")
   clicked: false
