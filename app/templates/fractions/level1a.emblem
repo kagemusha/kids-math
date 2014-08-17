@@ -1,0 +1,30 @@
+#fractions
+  h3 Fractions
+
+  partitioned-rectangle partCount=denominator selectedCount=numerator selectedColor=selectedColor
+  br
+  | How many parts does the rectangle have?&nbsp;
+  if denominatorCorrect
+    .answer
+      denominator
+    .answer-right Right!
+  else
+    =input type='text' enter="onDenominatorAnswer" autofocus='true' size='1'
+    if answeredDenominator
+      unless denominatorCorrect
+        | #{denominatorAnswer} is wrong!  Try again!
+  br
+  br
+  if denominatorCorrect
+    | How many parts are #{selectedColor}?&nbsp;
+    if numeratorCorrect
+      numeratorAnswer
+      .complete
+        | Right!
+        span.answer #{numerator} of #{denominator}
+        | &nbsp;are #{selectedColor}
+    else
+      =input type='text' enter="onNumeratorAnswer" size='1' autofocus='true'
+      if answeredNumerator
+        unless numeratorCorrect
+          | #{numeratorAnswer} is wrong!  Try again!

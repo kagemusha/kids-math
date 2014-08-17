@@ -7,6 +7,9 @@ Router.map ->
   @route "operation-table"
   @route "count-by"
   @route "quiz"
-  @route "fractions"
+  @resource "fractions", ->
+    @route "level1a"
+    @route "level1b"
+
 
 `export default Router`

@@ -7,6 +7,7 @@ Obj = Em.Controller.extend
   denominator: 5
   numerator: 2
   selectedColor: "green"
+  repititions: 0
 
   answeredDenominator: false
   answeredNumerator: false
@@ -14,8 +15,12 @@ Obj = Em.Controller.extend
   numeratorAnswer: null
   denominatorCorrect: false
   numeratorCorrect: false
-
+  complete: (->
+    @get('repititions') > 1
+  ).property("repititions")
   reset: ->
+    if @get('complete')
+      @transitionToRoute 'fractions.level1b'
     min = @get('minDenominator')
     range = @get('maxDenominator') - min
     denominator = randomInt(range, min)
@@ -27,6 +32,7 @@ Obj = Em.Controller.extend
     @set('numeratorCorrect', false)
     @set('answeredDenominator', null)
     @set('answeredNumerator', null)
+    @incrementProperty 'repititions'
 
   actions:
     onDenominatorAnswer: (answer) ->

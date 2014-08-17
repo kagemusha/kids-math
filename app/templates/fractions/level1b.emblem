@@ -1,0 +1,19 @@
+#fractions
+  h3 Fractions
+
+  partitioned-rectangle partCount=denominator selectedCount=numerator selectedColor=selectedColor
+  br
+  | How many parts of the rectangle are #{selectedColor}?&nbsp;
+  if answerCorrect
+    | <the answer>
+    .complete
+      | Right!
+      span.answer #{numerator} of #{denominator}
+      | &nbsp;are #{selectedColor}
+  else
+    =input type='text'  value=denominatorAnswer size='1' autofocus='true'
+    | &nbsp;of&nbsp;
+    =input type='text' enter="onAnswer" size='1'
+    if answered
+      unless answerCorrect
+        | Nope!  Try again!

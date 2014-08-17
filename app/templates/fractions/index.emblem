@@ -1,0 +1,4 @@
+h1 Are you ready to become a fractions wizard?
+
+
+button{action 'becomeWizard' 'yes'} Yes!!
