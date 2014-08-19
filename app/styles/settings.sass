@@ -1,0 +1,74 @@
+$settings-width: 300px
+$settings-padding: 8px
+
+#settings 
+  position: absolute
+  top:  0
+  left: -$settings-width
+  background: #fafad2
+  width: $settings-width
+  height: 100%
+  z-index: 10
+  &.is-showing-settings 
+    left: 0
+  
+  &.is-hiding-settings 
+    left: -$settings-width
+  
+
+
+#settings-inset 
+  margin: 8px
+  padding: 8px
+
+$transition-time: 400ms
+
+label 
+  font-weight: bold
+
+
+.is-showing-settings, .is-hiding-settings 
+  transition: left $transition-time
+  -moz-transition: left $transition-time
+  -webkit-transition: left $transition-time
+  -o-transition: left $transition-time
+
+
+#drawer 
+  position: absolute
+  top:  15px
+  left: 30px
+  height: 40px
+  width: 40px
+  padding: 5px
+
+
+#drawer .bar 
+  height: 8px
+  width: 100%
+  background: #d3d3d3
+  margin-bottom: 5px
+
+
+#drawer:hover .bar 
+  height: 8px
+  width: 100%
+  background: black
+  margin-bottom: 5px
+
+
+button#close-settings 
+  background: purple
+  color: white
+  font-weight: normal
+  font-size: 14px
+  &:hover 
+    color: white
+    background: blue
+  
+
+
+input 
+  border-radius: 6px
+  padding: 4px
+  font-size: 16px

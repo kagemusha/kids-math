@@ -1,0 +1,194 @@
+@import "variables"
+@import "settings"
+@import "operations-table"
+@import "count-table"
+
+$num1-color: purple
+$num2-color: #b8860b
+$answer-color: blue
+
+$equation-font-size: 32px
+
+$ball-radius: 14px
+$ball-width: calc( 2 * #{$ball-radius})
+
+h2 
+  font-size: 18px
+  color: blue
+
+
+#menu li 
+  display: inline
+  list-style-type: none
+  padding-right: 20px
+
+
+#content 
+  margin: 20px 100px
+
+
+#equation 
+  margin: 20px 0
+  font-size: $equation-font-size
+  font-weight: bold
+
+
+#answer-range 
+  position: relative
+  margin: 10px 0 30px 0
+  button.is-disappeared 
+    width: 0
+    margin-right: 0
+    background-color: white
+    font-size: 0px
+  
+
+//button.is-answered-state.is-selected
+//  background-color: red
+//  width: 40px
+
+//#answer
+//  width: 80px
+//  font-size: 22px
+//  font-weight: bold
+
+
+button 
+  font-size: 20px
+  margin-right: 5px
+  font-weight: bold
+  color: white
+  background: $answer-color
+  border-radius: 8px
+  border: none
+  &#answer 
+    width: 40px
+  
+  &:hover 
+    background: #4169e1
+  
+
+
+#visualization 
+  font-size: $equation-font-size
+  font-weight: bold
+  vertical-align: center
+
+
+#space1 
+  height: 6px
+  &.is-answered-state 
+    height: 30px
+  
+
+
+#space2 
+  height: 30px
+  &.is-answered-state 
+    height: 2px
+  
+
+
+.num 
+  &.color1 
+    color: $num1-color
+  
+  &.color2 
+    color: $num2-color
+  
+
+
+
+.ball 
+  display: inline-block
+  background: $answer-color
+  border-radius: $ball-radius
+  width: $ball-width
+  height: calc( 2 * #{$ball-radius})
+  &.color1 
+    background: $num1-color
+  
+  &.color2 
+    background: $num2-color
+  
+  &.answer 
+    background: $answer-color
+    color: white
+    font-weight: bold
+    text-align: center
+    width: 0
+    font-size: 1px
+    &.is-answered-state 
+      font-size: 22px
+      width: $ball-width
+    
+  
+
+
+
+
+span#visualization-operation 
+  display: inline-block
+  &.is-answered-state 
+    width: 0
+  
+
+
+#buttons 
+  #msg 
+    display: inline
+    color: white
+    font-weight: bold
+    font-size: 36px
+    &.is-answered-state 
+      color: red
+      &.is-correct-state 
+        color: green
+      
+    
+  
+
+  button 
+    width: 150px
+    background: white
+    font-size: 24px
+    &.is-answered-state 
+      background: red
+      &:hover 
+        background: darkred
+      
+      &.is-correct-state 
+        background: green
+        &:hover 
+          background: #006400
+        
+      
+    
+  
+
+
+
+$transition-time: 1000ms
+
+.is-answered-state, .is-disappeared 
+  transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+  -moz-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+  -webkit-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+  -o-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+
+//.is-disappeared
+//  -moz-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+//  -webkit-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+//  -o-transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+//  transition: width $transition-time, height $transition-time, background-color 0, font-size $transition-time
+
+table 
+  td 
+    text-align: right
+  
+
+
+.question-count 
+  margin-bottom: 10px
+  font-weight: bold
+
